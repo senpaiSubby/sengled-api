@@ -1,3 +1,7 @@
+![npm](https://img.shields.io/npm/v/@callmekory/sengled-api?style=for-the-badge)
+![npm](https://img.shields.io/npm/dm/@callmekory/sengled-api?style=for-the-badge)
+![GitHub issues](https://img.shields.io/github/issues-raw/callmekory/sengled-api?style=for-the-badge)
+
 # Sengled Api
 
 > Sengled API wrapper for NodeJS.
