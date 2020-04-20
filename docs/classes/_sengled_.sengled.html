@@ -2738,6 +2738,9 @@ img {
 					<a href="_sengled_.sengled.html#jsessionid" class="tsd-kind-icon">jsessionid</a>
 				</li>
 				<li class=" tsd-kind-method tsd-parent-kind-class">
+					<a href="_sengled_.sengled.html#authviasessionid" class="tsd-kind-icon">auth<wbr>Via<wbr>Session<wbr>Id</a>
+				</li>
+				<li class=" tsd-kind-method tsd-parent-kind-class">
 					<a href="_sengled_.sengled.html#getdevices" class="tsd-kind-icon">get<wbr>Devices</a>
 				</li>
 				<li class=" tsd-kind-method tsd-parent-kind-class">
@@ -2781,6 +2784,7 @@ img {
 					<section class="tsd-index-section ">
 						<h3>Methods</h3>
 						<ul class="tsd-index-list">
+							<li class="tsd-kind-method tsd-parent-kind-class"><a href="_sengled_.sengled.html#authviasessionid" class="tsd-kind-icon">auth<wbr>Via<wbr>Session<wbr>Id</a></li>
 							<li class="tsd-kind-method tsd-parent-kind-class"><a href="_sengled_.sengled.html#getdevices" class="tsd-kind-icon">get<wbr>Devices</a></li>
 							<li class="tsd-kind-method tsd-parent-kind-class"><a href="_sengled_.sengled.html#getrooms" class="tsd-kind-icon">get<wbr>Rooms</a></li>
 							<li class="tsd-kind-method tsd-parent-kind-class"><a href="_sengled_.sengled.html#login" class="tsd-kind-icon">login</a></li>
@@ -2801,7 +2805,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in Sengled.ts:16</li>
+								<li>Defined in <a href="https://github.com/callmekory/sengled-api/blob/e987901/src/Sengled.ts#L16">Sengled.ts:16</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-returns-title">Returns <a href="_sengled_.sengled.html" class="tsd-signature-type">Sengled</a></h4>
@@ -2817,7 +2821,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">base<wbr>Url<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in Sengled.ts:15</li>
+						<li>Defined in <a href="https://github.com/callmekory/sengled-api/blob/e987901/src/Sengled.ts#L15">Sengled.ts:15</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -2827,7 +2831,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">headers<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{}</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in Sengled.ts:16</li>
+						<li>Defined in <a href="https://github.com/callmekory/sengled-api/blob/e987901/src/Sengled.ts#L16">Sengled.ts:16</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-type-declaration">
@@ -2842,13 +2846,44 @@ img {
 				<div class="tsd-signature tsd-kind-icon">jsessionid<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in Sengled.ts:14</li>
+						<li>Defined in <a href="https://github.com/callmekory/sengled-api/blob/e987901/src/Sengled.ts#L14">Sengled.ts:14</a></li>
 					</ul>
 				</aside>
 			</section>
 		</section>
 		<section class="tsd-panel-group tsd-member-group ">
 			<h2>Methods</h2>
+			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<a name="authviasessionid" class="tsd-anchor"></a>
+				<h3>auth<wbr>Via<wbr>Session<wbr>Id</h3>
+				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<li class="tsd-signature tsd-kind-icon">auth<wbr>Via<wbr>Session<wbr>Id<span class="tsd-signature-symbol">(</span>jsessionid<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/callmekory/sengled-api/blob/e987901/src/Sengled.ts#L57">Sengled.ts:57</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Set auth token. Faster than logging in and generating a new one each time</p>
+							</div>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>jsessionid: <span class="tsd-signature-type">string</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>jsession ID from login() method</p>
+								</div>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h4>
+					</li>
+				</ul>
+			</section>
 			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 				<a name="getdevices" class="tsd-anchor"></a>
 				<h3>get<wbr>Devices</h3>
@@ -2859,7 +2894,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in Sengled.ts:66</li>
+								<li>Defined in <a href="https://github.com/callmekory/sengled-api/blob/e987901/src/Sengled.ts#L79">Sengled.ts:79</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="_device_.device.html" class="tsd-signature-type">Device</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -2876,7 +2911,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in Sengled.ts:53</li>
+								<li>Defined in <a href="https://github.com/callmekory/sengled-api/blob/e987901/src/Sengled.ts#L66">Sengled.ts:66</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="_room_.room.html" class="tsd-signature-type">Room</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -2893,7 +2928,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in Sengled.ts:29</li>
+								<li>Defined in <a href="https://github.com/callmekory/sengled-api/blob/e987901/src/Sengled.ts#L29">Sengled.ts:29</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">

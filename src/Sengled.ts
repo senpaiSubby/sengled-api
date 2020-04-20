@@ -50,6 +50,19 @@ export class Sengled {
     throw new Error(resp.msg)
   }
 
+  /**
+   * Set auth token. Faster than logging in and generating a new one each time
+   * @param jsessionid jsession ID from login() method
+   */
+  async authViaSessionId(jsessionid: string) {
+    this.jsessionid = jsessionid
+    this.headers = {
+      'Content-Type': 'application/json',
+      Cookie: `JSESSIONID=${jsessionid}`
+    }
+    return 'OK'
+  }
+
   async getRooms() {
     const response = await got(`${this.baseUrl}/room/getUserRoomsDetail.json`, {
       method: 'POST',
