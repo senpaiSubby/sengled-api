@@ -1,0 +1,58 @@
+{
+  "author": "callmekory",
+  "dependencies": {
+    "@callmekory/utils": "^1.1.7",
+    "@types/url-join": "^4.0.0",
+    "got": "^10.7.0",
+    "url-join": "^4.0.1"
+  },
+  "description": "sengled-api",
+  "devDependencies": {
+    "@types/node": "^13.9.1",
+    "@types/node-fetch": "^2.5.6",
+    "@types/node-os-utils": "^1.2.0",
+    "prettier": "^1.19.1",
+    "ts-node-dev": "^1.0.0-pre.44",
+    "tslint": "^6.1.0",
+    "tslint-config-airbnb": "^5.11.2",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-lines-between-class-members": "^1.3.6",
+    "tslint-plugin-prettier": "^2.2.0",
+    "typescript": "^3.8.3"
+  },
+  "files": [
+    "dist/**/*"
+  ],
+  "homepage": "https://github.com/callmekory/sengled-api#readme",
+  "jest": {
+    "testPathIgnorePatterns": [
+      "dist"
+    ]
+  },
+  "keywords": [
+    "sengled",
+    "api",
+    "smart home",
+    "lights",
+    "homebridge"
+  ],
+  "license": "ISC",
+  "main": "dist/index.js",
+  "name": "@callmekory/sengled-api",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/callmekory/sengled-api.git"
+  },
+  "scripts": {
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json",
+    "postversion": "git push && git push --tags",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src"
+  },
+  "types": "dist",
+  "version": "1.0.0"
+}
