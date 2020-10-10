@@ -1,29 +1,38 @@
-/*!
- * Coded by CallMeKory - https://github.com/callmekory
- * 'It’s not a bug – it’s an undocumented feature.'
- */
-
-import got from 'got/dist/source'
+import got from 'got'
 import urljoin from 'url-join'
+
 import { Device } from './Device'
 import { RoomList, ScheduleList } from './typings'
 
 export class Room {
   private headers: { 'Content-Type': string; Cookie: string }
+
   private baseUrl: string
+
   private jsessionid: string
 
   roomId: number
+
   roomName: string
+
   roomImgType: number
+
   roomImgUrl: string
+
   roomStatus: number
+
   brightness: number
+
   colortemperature: number
+
   rgbColorR: number
+
   rgbColorG: number
+
   rgbColorB: number
+
   scheduleList: ScheduleList[]
+
   deviceList: Device[]
 
   constructor(

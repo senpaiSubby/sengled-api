@@ -1,18 +1,14 @@
-/*!
- * Coded by CallMeKory - https://github.com/callmekory
- * 'It’s not a bug – it’s an undocumented feature.'
- */
-
-// Https://discourse.pi-hole.net/t/pi-hole-api/1863
-
 import got from 'got'
+
 import { Device } from './Device'
 import { Room } from './Room'
 import { SengledDevices } from './typings'
 
 export class Sengled {
   jsessionid: string
+
   baseUrl: string
+
   headers: {}
 
   constructor() {
@@ -54,7 +50,7 @@ export class Sengled {
    * Set auth token. Faster than logging in and generating a new one each time
    * @param jsessionid jsession ID from login() method
    */
-  async authViaSessionId(jsessionid: string) {
+  authViaSessionId(jsessionid: string) {
     this.jsessionid = jsessionid
     this.headers = {
       'Content-Type': 'application/json',

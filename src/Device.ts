@@ -1,32 +1,47 @@
-/*!
- * Coded by CallMeKory - https://github.com/callmekory
- * 'It’s not a bug – it’s an undocumented feature.'
- */
-
-import got from 'got/dist/source'
+import got from 'got'
 import urljoin from 'url-join'
+
 import { DeviceInfo } from './typings'
 
 export class Device {
   private headers: { 'Content-Type': string; Cookie: string }
+
   private baseUrl: string
+
   deviceUuid: string
+
   gatewayUuid: string
+
   deviceName: string
+
   brightness: number
+
   colortemperature: number
+
   onoff: number
+
   signalQuality: number
+
   signalValue: number
+
   activeHours: number
+
   isOnline: number
+
   power: string
+
   onCount: number
+
   powerConsumptionTime: string
+
   productCode: string
+
   attributeIds: string
+
   rgbColorR: number
+
   rgbColorG: number
+
   rgbColorB: number
 
   constructor(
@@ -76,6 +91,13 @@ export class Device {
       'Content-Type': 'application/json',
       Cookie: `JSESSIONID=${jsessionid}`
     }
+  }
+
+  /**
+   * Toggle device power state
+   */
+  public async toggle() {
+    return this.brightness === 0 ? await this.on() : await this.off()
   }
 
   /**

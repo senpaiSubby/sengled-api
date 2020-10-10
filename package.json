@@ -1,34 +1,7 @@
 {
-  "author": "callmekory",
-  "dependencies": {
-    "@callmekory/utils": "^1.1.7",
-    "@types/url-join": "^4.0.0",
-    "got": "^10.7.0",
-    "url-join": "^4.0.1"
-  },
+  "name": "@callmekory/sengled-api",
+  "version": "1.0.3",
   "description": "sengled-api",
-  "devDependencies": {
-    "@types/node": "^13.9.1",
-    "@types/node-fetch": "^2.5.6",
-    "@types/node-os-utils": "^1.2.0",
-    "prettier": "^1.19.1",
-    "ts-node-dev": "^1.0.0-pre.44",
-    "tslint": "^6.1.0",
-    "tslint-config-airbnb": "^5.11.2",
-    "tslint-config-prettier": "^1.18.0",
-    "tslint-lines-between-class-members": "^1.3.6",
-    "tslint-plugin-prettier": "^2.2.0",
-    "typescript": "^3.8.3"
-  },
-  "files": [
-    "dist/**/*"
-  ],
-  "homepage": "https://github.com/callmekory/sengled-api#readme",
-  "jest": {
-    "testPathIgnorePatterns": [
-      "dist"
-    ]
-  },
   "keywords": [
     "sengled",
     "api",
@@ -36,23 +9,62 @@
     "lights",
     "homebridge"
   ],
-  "license": "ISC",
-  "main": "dist/index.js",
-  "name": "@callmekory/sengled-api",
+  "homepage": "https://github.com/callmekory/sengled-api#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/callmekory/sengled-api.git"
   },
+  "license": "ISC",
+  "author": "callmekory",
+  "main": "dist/index.js",
+  "types": "dist",
+  "files": [
+    "dist/**/*"
+  ],
   "scripts": {
     "build": "tsc",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
     "lint": "tslint -p tsconfig.json",
-    "postversion": "git push && git push --tags",
     "prepare": "npm run build",
     "prepublishOnly": "npm test && npm run lint",
     "preversion": "npm run lint",
-    "version": "npm run format && git add -A src"
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
   },
-  "types": "dist",
-  "version": "1.0.2"
+  "jest": {
+    "testPathIgnorePatterns": [
+      "dist"
+    ]
+  },
+  "dependencies": {
+    "@callmekory/utils": "^1.1.7",
+    "@types/url-join": "^4.0.0",
+    "got": "^11.7.0",
+    "url-join": "^4.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^13.9.1",
+    "@types/node-fetch": "^2.5.6",
+    "@types/node-os-utils": "^1.2.0",
+    "@typescript-eslint/eslint-plugin": "^3.1.0",
+    "@typescript-eslint/eslint-plugin-tslint": "^3.1.0",
+    "@typescript-eslint/parser": "^3.1.0",
+    "eslint": "^7.1.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-autofix": "^1.0.0",
+    "eslint-plugin-header": "^3.0.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jsdoc": "^27.0.2",
+    "eslint-plugin-prefer-arrow": "^1.2.1",
+    "eslint-plugin-prettier": "^3.1.3",
+    "prettier": "^1.19.1",
+    "ts-node-dev": "^1.0.0-pre.44",
+    "tslint": "^6.1.0",
+    "tslint-config-airbnb": "^5.11.2",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-etc": "^1.10.1",
+    "tslint-lines-between-class-members": "^1.3.6",
+    "tslint-plugin-prettier": "^2.2.0",
+    "typescript": "^3.8.3"
+  }
 }
